@@ -7,7 +7,7 @@ const redis = Redis.fromEnv()
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, answers, totalScore } = body
+    const { name, answers, freeTextAnswers, totalScore } = body
 
     if (!name || !answers) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
@@ -18,6 +18,7 @@ export async function POST(req: NextRequest) {
     const submission = {
       name: name.trim(),
       answers,
+      freeTextAnswers: freeTextAnswers || {},
       totalScore,
       pokemonName: pokemon.name,
       pokemonColor: pokemon.color,
