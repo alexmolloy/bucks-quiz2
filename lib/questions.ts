@@ -72,9 +72,9 @@ export const questions: Question[] = [
     text: "What was/is Ritchie's greatest conquest?",
     answers: [
       { text: "His inner demons", points: 1 },
-      { text: "Missing the Crypto revolution", points: 0 },
+      { text: "Successfully negotiating this trip with Jess", points: 1 },
       { text: "Tara Osbourne", points: 2 },
-      { text: "Lauren Koh", points: 0 },
+      { text: "Pointsmaxxing Woolworths rewards", points: 1 },
     ],
   },
   {
